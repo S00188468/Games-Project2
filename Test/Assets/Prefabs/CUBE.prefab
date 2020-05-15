@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022269601157679364}
   - component: {fileID: 1069492755437785430}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022677192716923678}
   - component: {fileID: 1069439102960922106}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021865231651158072}
   - component: {fileID: 1069172228836660096}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022791625066960446}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 1022597396313847124}
   - component: {fileID: 1069133694978923300}
   - component: {fileID: 1069376591427110980}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022671021213857818}
   - component: {fileID: 1069142181146940042}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022384435091249896}
   - component: {fileID: 1069386068022920670}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 1022088307596819154}
   - component: {fileID: 1029226696044326206}
   - component: {fileID: 1040042390630700290}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: chair_mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022793572038811230}
   - component: {fileID: 1069067559883838354}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 28021416920685808}
-  m_Layer: 0
+  - component: {fileID: 7192181171050405320}
+  m_Layer: 14
   m_Name: CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,6 +473,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &7192181171050405320
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255901889368590821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &7273605667761961008
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +498,7 @@ GameObject:
   - component: {fileID: 7273605667762447376}
   - component: {fileID: 7273605667741593776}
   - component: {fileID: 8699259009907694251}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: TableAngular
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +574,7 @@ GameObject:
   - component: {fileID: 7273605667762447384}
   - component: {fileID: 7273605667759055926}
   - component: {fileID: 7273605667760023286}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Table_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +653,7 @@ GameObject:
   - component: {fileID: 7273605667762447386}
   - component: {fileID: 7273605667759055928}
   - component: {fileID: 7273605667760023288}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Table_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +732,7 @@ GameObject:
   - component: {fileID: 7273605667762447388}
   - component: {fileID: 7273605667759055930}
   - component: {fileID: 7273605667760023290}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Table_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +811,7 @@ GameObject:
   - component: {fileID: 6515183682496984059}
   - component: {fileID: 2824200848134392269}
   - component: {fileID: 8362369624077219124}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Cubicle (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

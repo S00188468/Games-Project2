@@ -302,18 +302,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioSource: {fileID: 0}
   weaponPrefab: {fileID: 0}
   playerInventoryIndex: -1
   defaultWeaponPosition: {x: 0, y: 0, z: 0}
-  damage: 100
+  damage: 2000
   targetMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 262144
   ThrowOnSpawn: 1
-  throwForce: 20
+  throwForce: 35
   CanDamageTarget: 1
   throwAudio: {fileID: 8300000, guid: 7b4b4858badee3f4da47da79c22c9795, type: 3}
   throwAnimation: {fileID: 7400000, guid: 6bcfdb8c5d92e95449c8953e5e75fb72, type: 2}
   CanRotate: 1
-  rotationSpeed: 50
+  rotationSpeed: 100
   impactOnEnemy: {fileID: 0}

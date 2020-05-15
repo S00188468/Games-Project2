@@ -7,8 +7,7 @@ public class GuardAttack : MonoBehaviour
     // Start is called before the first frame update
     
     public float damage=20;
-    public float attackSpeed;    
-    
+    public float attackSpeed;        
     bool CheckForPlayerCollision;
     [Range(0,1)]
     public float dashAttackOffset;

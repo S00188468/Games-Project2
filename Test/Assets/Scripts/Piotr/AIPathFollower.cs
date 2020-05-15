@@ -12,6 +12,7 @@ public class AIPathFollower : NavMeshEnemy
     GuardDetection GuardDetection;
    protected Transform player;
     Transform guard;
+    
     Vector3 lastknownposition;
     public AudioClip stoprightthere;
     bool sawplayer;
@@ -23,7 +24,12 @@ public class AIPathFollower : NavMeshEnemy
     float attackTimer;
     public float TimeToAttack;
     float attackdistance = 10f;
-    
+    float decoytimer;
+    float timetowait=5f;
+    public bool croscroissantdetected;
+
+
+
     public override void Start()
     {
         base.Start();        
@@ -31,9 +37,12 @@ public class AIPathFollower : NavMeshEnemy
         GuardDetection = GetComponent<GuardDetection>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         guard = GameObject.FindGameObjectWithTag("Enemy").transform;
+        
+        
         AudioSource = GetComponent<AudioSource>();
         GuardAttack = GetComponent<GuardAttack>();
         playaudioondetection = true;
+        
 
 
     }
@@ -41,6 +50,11 @@ public class AIPathFollower : NavMeshEnemy
     {
         base.Update();
         EngagePlayer();
+        if (GuardDetection.decoy != null)
+        {
+            EngageDecoy();
+        }
+        
     }
     private void MoveToPathNode(PathNode node)
     {
@@ -68,7 +82,7 @@ public class AIPathFollower : NavMeshEnemy
     }
     private void EngagePlayer()
     {
-        if (GuardDetection.PlayerDetected())
+        if (GuardDetection.PlayerDetected()&&!GuardDetection.DecoyDetected())
         {
             
             if (playaudioondetection==true)
@@ -93,7 +107,7 @@ public class AIPathFollower : NavMeshEnemy
             }
             
         }
-        else if (sawplayer&&!GuardDetection.PlayerDetected())
+        else if (sawplayer&&!GuardDetection.PlayerDetected()&&!GuardDetection.DecoyDetected())
         {
             MoveTo(lastknownposition);
             if (Vector3.Distance(guard.position, lastknownposition) <= 1f)
@@ -106,5 +120,28 @@ public class AIPathFollower : NavMeshEnemy
         }
         
         
+    }
+    private void EngageDecoy()
+    {
+        if (GuardDetection.DecoyDetected())
+        {
+            MoveTo(GuardDetection.decoy.position);
+            if (Vector3.Distance(transform.position, GuardDetection.decoy.position) <= 2f||croscroissantdetected)
+            {
+                croscroissantdetected = true;
+                StopMoving();
+                decoytimer += Time.deltaTime;
+                if (decoytimer >= timetowait)
+                {
+                    ResumeMoving();
+                    Destroy(GuardDetection.decoy.gameObject);
+                    MoveToPathNode();
+                    decoytimer = 0f;
+                    croscroissantdetected = false;
+                }
+            }
+                        
+        }
+
     }
 }

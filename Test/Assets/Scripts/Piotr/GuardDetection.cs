@@ -8,12 +8,14 @@ public class GuardDetection : NavMeshEnemy
     public float viewDistance;
     public LayerMask GuardViewMask;
     float GuardViewAngle;
+    float decoyviewDistance=10f;
 
     Transform player;
+    public Transform decoy;
 public override void Start()
     {
         base.Start();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;        
         GuardViewAngle = spotlight.spotAngle;
     }
     public bool PlayerDetected()
@@ -32,5 +34,25 @@ public override void Start()
         }
         return false;
        
+    }
+    public bool DecoyDetected()
+    {
+        if (decoy != null)
+        {
+
+
+            if (Vector3.Distance(transform.position, decoy.position) <= decoyviewDistance)
+            {
+
+
+                if (!Physics.Linecast(transform.position, decoy.position, GuardViewMask))
+                {
+                    return true;
+                }
+
+
+            }
+        }
+        return false;
     }
 }
